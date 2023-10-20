@@ -1,0 +1,17 @@
+h3{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 5px;
+}
+h2{
+    text-align: center;
+
+}
+p{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+}
+section{
+    margin-left: 320px;
+}
