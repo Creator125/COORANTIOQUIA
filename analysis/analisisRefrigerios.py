@@ -1,28 +1,27 @@
 from data.ListaRefrigerios import refrigerios
 from helpers.crearCSV import crearCSVRefrigerios
 from helpers.crearHTML import crearTabla
+from helpers.crearPDF import crearPDF
 import pandas as pd
 
 crearCSVRefrigerios(refrigerios, 'dbRefrigerios.csv')
 
 #creando un dataframe desde una fuente CSV
 dataFrameRefrigerios = pd.read_csv('data/dbRefrigerios.csv')
-print(dataFrameRefrigerios)
 
 #convertir el DF en TABLA HTML
 crearTabla(dataFrameRefrigerios,'refrigerios')
 
+#convertir el DF en PDF
+crearPDF(dataFrameRefrigerios, 'refrigerios')
+
 #Realizando filtros
-print(" ")
-print("-------------- Filtro de Refrigerios --------------")
-print(" ")
+print("Cargando filtro de Refrigerios")
 
-print("Refrigerios cuyo valor unitario sea mayor a 20.000")
+#print("Refrigerios cuyo valor unitario sea mayor a 20.000")
 filtroPrecioMayor = dataFrameRefrigerios.query("Precio > 20000")
-print(filtroPrecioMayor)
+crearTabla(filtroPrecioMayor,'refrigerios_filtro_1')
 
-print(" ")
-
-print("Cantidades de refrigerios menores a 1000")
+#print("Cantidades de refrigerios menores a 1000")
 filtroCantidad = dataFrameRefrigerios.query("Cantidad < 1000")
-print(filtroCantidad)
+crearTabla(filtroCantidad,'refrigerios_filtro_2')

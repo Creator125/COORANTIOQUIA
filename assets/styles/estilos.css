@@ -1,0 +1,100 @@
+:root{
+    --verde-natural: rgb(55, 124, 57);
+    --verde-oscuro: rgb(18, 90, 20);
+    --verde-claro: rgb(168, 216, 123);
+    --azul-agua: rgb(90, 169, 214);
+    --marron-tierra: rgb(151, 101, 75);
+    --gris-claro: rgb(231, 231, 231);
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400; /* Puedes ajustar el peso según lo necesites */
+    src: url('../fonts/Poppins-Regular.ttf'); 
+}
+
+*{
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+.banner{
+    background: url("../img/banner.jpg") fixed;
+    background-size: cover;
+    padding: 25%;
+    position: relative;
+    z-index: 1;
+}
+
+.banner::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.menu-color{
+    background: #3dbd5d;
+}
+
+.banner2{
+    background: url("../img/banner2.jpg") fixed;
+    background-size: cover;
+    padding: 25%;
+    position: relative;
+    z-index: 1;
+}
+
+.banner::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.columnaDashboard{
+    height: 100vh;
+    background-color: var(--verde-natural);
+}
+
+.columnaDashboard div{
+    transition: background-color 0.7s;
+}
+
+.columnaDashboard div:hover{
+    background-color: var(--verde-oscuro);
+}
+
+.bg-aqua{
+    background-color: #6fe9e9;
+}
+
+.bg-yellow-orange{
+    background-color: #eeca00;
+}
+
+.bg-lite-green{
+    background-color: #96ff81;
+}
+
+.bg-verde-main{
+    background-color: var(--verde-natural);
+}
+
+.iframe-tabla{
+    width: 700px;
+    height: 200px;
+}
+
+.enlace-neutro{
+    color: #ffff;
+    text-decoration: none;
+}
